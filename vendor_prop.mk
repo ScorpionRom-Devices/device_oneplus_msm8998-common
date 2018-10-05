@@ -83,10 +83,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,com.android.camera \
+    persist.camera.HAL3.enabled=1 \
+    vendor.camera.aux.packagelist=com.oneplus.camera,org.codeaurora.snapcam,org.lineageos.snap,com.google.android.Pixel2ModUrnyx05,com.android.camera \
+    camera.hal1.packagelist=com.oneplus.camera \
     persist.camera.mobicat=2 \
     persist.camera.stats.debugexif=3080192 \
-    persist.ts.rtmakeup=false
+    persist.ts.rtmakeup=false \
+    camera.disable_zsl_mode=true \
+    persist.sys.camera.preview.size=1920x1080
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
